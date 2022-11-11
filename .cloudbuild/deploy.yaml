@@ -25,10 +25,12 @@ steps:
 
   # Clear public storage
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    entrypoint: 'gcloud'
     args: ['storage', 'rm', '-r', 'gs://${_PUBLIC_BUCKET_NAME}/']
 
   # Upload to public storage
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    entrypoint: 'gcloud'
     args:
       ['storage', 'cp', 'node_modules.tar.gz', 'gs://${_PUBLIC_BUCKET_NAME}/']
 
@@ -40,6 +42,7 @@ steps:
 
   # Cache node_modules archive
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    entrypoint: 'gcloud'
     waitFor: ['archive node_modules']
     args:
       [
