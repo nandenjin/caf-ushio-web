@@ -23,10 +23,11 @@ steps:
     entrypoint: yarn
     args: ['build']
 
-  # Clear public storage
+  # Clear public storage if objects are exists
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk
-    entrypoint: 'gcloud'
-    args: ['storage', 'rm', '-r', 'gs://${_PUBLIC_BUCKET_NAME}/*']
+    entrypoint: '/bin/bash'
+    args:
+      ['-c', 'gcloud storage rm -a gs://${_PUBLIC_BUCKET_NAME}/** || exit 0']
 
   # Upload to public storage
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk
