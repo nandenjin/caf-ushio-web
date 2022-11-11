@@ -22,6 +22,8 @@ steps:
   - name: node:18
     entrypoint: yarn
     args: ['build']
+    env:
+      - 'NEXT_PUBLIC_BASE_PATH=/caf/inada'
 
   # Clear public storage if objects are exists
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk
