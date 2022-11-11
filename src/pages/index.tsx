@@ -145,23 +145,6 @@ const Home: React.FC = () => (
         </div>
       </section>
       <section css={{ color: '#abb', fontSize: '0.8rem', marginTop: '3rem' }}>
-        <p>
-          このページは
-          <a
-            href="https://github.com/nandenjin/caf-ushio-web"
-            target="_blank"
-            rel="noreferrer"
-            css={{
-              display: 'inline-block',
-              color: '#9aa',
-              backgroundColor: '#e8efef',
-              fontFamily: 'Source Code Pro, Courier New, monospace',
-            }}
-          >
-            nandenjin/caf-ushio-web
-          </a>
-          からビルドされています。
-        </p>
         <a
           href="https://github.com/nandenjin/caf-ushio-web"
           target="_blank"
@@ -172,6 +155,10 @@ const Home: React.FC = () => (
             src="https://img.shields.io/github/last-commit/nandenjin/caf-ushio-web?style=flat-square"
             height="20"
             alt="Contribute on GitHub"
+            css={{
+              filter:
+                'grayscale(100%) sepia(20%) hue-rotate(140deg) opacity(80%)',
+            }}
           />
         </a>
       </section>
