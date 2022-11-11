@@ -1,0 +1,54 @@
+steps:
+  # Fetch cache archive
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    entrypoint: '/bin/bash'
+    args:
+      [
+        '-c',
+        'gcloud storage cp gs://${_CACHE_BUCKET_NAME}/caches/caf-web/node_modules.tar.gz gs://${_CACHE_BUCKET_NAME}/caches/db.sqlite . || exit 0',
+      ]
+
+  # Unzip cache
+  - name: bash
+    args: ['-c', 'tar xzf node_modules.tar.gz || exit 0']
+
+  # Install deps
+  - name: node:18
+    id: 'yarn-install'
+    entrypoint: yarn
+    args: ['install', '--frozen-lockfile']
+
+  # Build app
+  - name: node:18
+    entrypoint: yarn
+    args: ['build']
+
+  # Clear public storage
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    args: ['storage', 'rm', '-r', 'gs://${_PUBLIC_BUCKET_NAME}/']
+
+  # Upload to public storage
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    args:
+      ['storage', 'cp', 'node_modules.tar.gz', 'gs://${_PUBLIC_BUCKET_NAME}/']
+
+  # Zip node_modules
+  - name: bash
+    id: 'archive node_modules'
+    args: ['tar', 'czf', 'node_modules.tar.gz', 'node_modules']
+    waitFor: ['yarn-install']
+
+  # Cache node_modules archive
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    waitFor: ['archive node_modules']
+    args:
+      [
+        'storage',
+        'cp',
+        'node_modules.tar.gz',
+        'gs://${_CACHE_BUCKET_NAME}/caches/caf-web/',
+      ]
+
+substitutions:
+  _PUBLIC_BUCKET_NAME: caf-ushio-web
+  _CACHE_BUCKET_NAME: ushio-tide_cloudbuild
