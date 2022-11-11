@@ -138,9 +138,9 @@ const Home: React.FC = () => (
               公益財団法人現代芸術振興財団
             </a>
             <br />
-            TEL: 03-6441-3264
+            TEL: 03-6441-3264（平日10:00-17:00）
             <br />
-            平日 10:00 - 17:00
+            contact@gendai-art.org
           </div>
         </div>
       </section>
