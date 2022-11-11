@@ -31,8 +31,7 @@ steps:
   # Upload to public storage
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk
     entrypoint: 'gcloud'
-    args:
-      ['storage', 'cp', 'node_modules.tar.gz', 'gs://${_PUBLIC_BUCKET_NAME}/']
+    args: ['storage', 'cp', '-r', './out/*', 'gs://${_PUBLIC_BUCKET_NAME}/']
 
   # Zip node_modules
   - name: bash
