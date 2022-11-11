@@ -5,7 +5,7 @@ steps:
     args:
       [
         '-c',
-        'gcloud storage cp gs://${_CACHE_BUCKET_NAME}/caches/caf-web/node_modules.tar.gz gs://${_CACHE_BUCKET_NAME}/caches/db.sqlite . || exit 0',
+        'gcloud storage cp gs://${_CACHE_BUCKET_NAME}/caches/caf-web/node_modules.tar.gz . || exit 0',
       ]
 
   # Unzip cache
