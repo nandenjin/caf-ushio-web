@@ -26,7 +26,7 @@ steps:
   # Clear public storage
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk
     entrypoint: 'gcloud'
-    args: ['storage', 'rm', '-r', 'gs://${_PUBLIC_BUCKET_NAME}/']
+    args: ['storage', 'rm', '-r', 'gs://${_PUBLIC_BUCKET_NAME}/*']
 
   # Upload to public storage
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk
