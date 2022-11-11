@@ -50,7 +50,7 @@ const Home: React.FC = () => (
         <p>Kazumi INADA ushio</p>
         <p>2023.2.18 - 4.8</p>
         <p>
-          Contenporary Art Foundation Gallery
+          Contemporary Art Foundation Gallery
           <br />
           roppongi, tokyo
         </p>
