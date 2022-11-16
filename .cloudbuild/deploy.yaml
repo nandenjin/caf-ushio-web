@@ -25,6 +25,7 @@ steps:
     env:
       - 'NEXT_PUBLIC_HOST_URL=https://gendai-art.org'
       - 'NEXT_PUBLIC_BASE_PATH=/caf/inada'
+      - 'NEXT_GTAG_TRACKING_ID=G-RL974H0D69'
 
   # Clear public storage if objects are exists
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk
