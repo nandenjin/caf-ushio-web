@@ -23,7 +23,7 @@ steps:
     entrypoint: yarn
     args: ['build']
     env:
-      - 'NEXT_PUBLIC_HOST_URL=https://www.gendai-art.org'
+      - 'NEXT_PUBLIC_HOST_URL=https://gendai-art.org'
       - 'NEXT_PUBLIC_BASE_PATH=/caf/inada'
 
   # Clear public storage if objects are exists
