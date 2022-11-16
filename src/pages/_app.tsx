@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app'
 import { css, Global } from '@emotion/react'
 import facepaint from 'facepaint'
+import { DefaultSeo } from 'next-seo'
 
 export const mq = facepaint([
   '@media(min-width: 720px)',
@@ -33,6 +34,26 @@ export default function App({ Component, pageProps }: AppProps) {
             textDecoration: 'none',
           },
         })}
+      />
+      <DefaultSeo
+        defaultTitle="稲田和巳『潮』| 公益財団法人 現代芸術振興財団"
+        openGraph={{
+          type: 'website',
+          url: 'https://www.gendai-art.org/caf/inada/',
+          site_name: '稲田和巳『潮』/ 公益財団法人 現代芸術振興財団',
+          description:
+            '稲田和巳 個展『潮』公式サイト。2022/2/18 - 4/8、現代芸術振興財団ギャラリー（六本木）で開催。',
+          images: [
+            {
+              url: process.env.baseUrl + '/thumbnail.png',
+            },
+          ],
+        }}
+        twitter={{
+          handle: '@nandenjin',
+          site: '@gendai_art_caf',
+          cardType: 'summary_large_image',
+        }}
       />
       <Component {...pageProps} />
     </>
