@@ -1,11 +1,11 @@
 # 🗺 caf-ushio-web
 
-Website for Kazumi Inada Solo Exhibition "Ushio". Visit site: [www.gendai-art.org/caf/inada](https://www.gendai-art.org/caf/inada)
+Website for Kazumi Inada Solo Exhibition "Ushio". Visit site: [gendai-art.org/caf/inada](https://gendai-art.org/caf/inada)
 
 ![CI Status](https://img.shields.io/github/workflow/status/nandenjin/caf-ushio-web/CI?label=CI&logo=github&style=flat-square)
 ![Next.js version](https://img.shields.io/github/package-json/dependency-version/nandenjin/caf-ushio-web/react?label=React&logo=react&style=flat-square)
 ![Next.js version](https://img.shields.io/github/package-json/dependency-version/nandenjin/caf-ushio-web/next?label=next.js&logo=next.js&style=flat-square)
-[![Supported by Contemporary Art Foundation](https://img.shields.io/badge/Suppoted%20by-Contemporary%20Art%20Foundation-yellow?style=flat-square)](https://www.gendai-art.org)
+[![Supported by Contemporary Art Foundation](https://img.shields.io/badge/Suppoted%20by-Contemporary%20Art%20Foundation-yellow?style=flat-square)](https://gendai-art.org)
 
 ## Setup & Development
 
