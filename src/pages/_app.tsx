@@ -54,6 +54,12 @@ export default function App({ Component, pageProps }: AppProps) {
           site: '@gendai_art_caf',
           cardType: 'summary_large_image',
         }}
+        additionalLinkTags={[
+          {
+            rel: 'icon',
+            href: process.env.baseUrl + '/favicon.ico',
+          },
+        ]}
       />
       <Component {...pageProps} />
     </>
