@@ -12,6 +12,7 @@ const nextConfig = {
   },
   env: {
     baseUrl: HOST_URL + basePath,
+    GTAG_TRACKING_ID: process.env.NEXT_GTAG_TRACKING_ID,
   },
 }
 

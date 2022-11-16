@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app'
 import { css, Global } from '@emotion/react'
 import facepaint from 'facepaint'
 import { DefaultSeo } from 'next-seo'
+import { GTagManager } from '@/components/GTagManager'
 
 export const mq = facepaint([
   '@media(min-width: 720px)',
@@ -35,6 +36,11 @@ export default function App({ Component, pageProps }: AppProps) {
           },
         })}
       />
+      {process.env.GTAG_TRACKING_ID ? (
+        <GTagManager trackingId={process.env.GTAG_TRACKING_ID} />
+      ) : (
+        ''
+      )}
       <DefaultSeo
         defaultTitle="稲田和巳『潮』| 公益財団法人 現代芸術振興財団"
         openGraph={{
