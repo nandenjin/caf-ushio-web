@@ -1,0 +1,32 @@
+on:
+  push:
+    branches: [dev, 'renovate/*']
+  pull_request:
+name: CI
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request' || !startsWith(github.head_ref, 'renovate/')
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: yarn
+      - run: yarn install --frozen-lockfile
+      - run: yarn run lint
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request' || !startsWith(github.head_ref, 'renovate/')
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: yarn
+      - run: yarn install --frozen-lockfile
+      - run: yarn run build
