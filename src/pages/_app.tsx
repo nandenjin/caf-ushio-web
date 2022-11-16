@@ -1,5 +1,11 @@
 import type { AppProps } from 'next/app'
 import { css, Global } from '@emotion/react'
+import facepaint from 'facepaint'
+
+export const mq = facepaint([
+  '@media(min-width: 720px)',
+  '@media(min-width: 1120px)',
+])
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -11,10 +17,10 @@ export default function App({ Component, pageProps }: AppProps) {
  `}
       />
       <Global
-        styles={{
+        styles={mq({
           'html, body': {
             fontFamily: 'sans-serif',
-            fontSize: '1.2vw',
+            fontSize: ['14px', '1.2vw'],
           },
           p: {
             marginBottom: '0.5em',
@@ -26,7 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
             color: '#09f',
             textDecoration: 'none',
           },
-        }}
+        })}
       />
       <Component {...pageProps} />
     </>

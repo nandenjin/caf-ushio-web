@@ -4,49 +4,52 @@ import React from 'react'
 import UshioLogo from '@/assets/ushio.svg'
 import CAFLogo from '@/assets/caf-logo.svg'
 import Image from 'next/image'
+import { mq } from './_app'
 
 const separator = {
   '::before': {
     content: '""',
     display: 'block',
     width: '2rem',
-    height: '2px',
+    height: '0.1rem',
     backgroundColor: '#20C1F2',
     marginBottom: '2rem',
   },
 }
+
 const Home: React.FC = () => (
   <main
-    css={{
-      display: 'grid',
+    css={mq({
+      display: ['block', 'grid'],
       gridTemplateColumns: '5fr 6fr',
-      margin: '40px 10vw',
+      margin: ['40px 30px', '40px 10vw'],
       minHeight: 'calc(100vh - 40px * 2)',
-    }}
+    })}
   >
     <div
-      css={{
-        position: 'fixed',
+      css={mq({
+        position: ['static', 'fixed'],
         display: 'grid',
         gridTemplateRows: '1fr auto',
-        height: 'calc(100vh - 40px * 2)',
-      }}
+        height: ['auto', 'calc(100vh - 40px * 2)'],
+        margin: ['0 0 40px', '0'],
+      })}
     >
       <div
-        css={{
-          width: '20rem',
-          height: '20rem',
+        css={mq({
+          width: ['15rem', '20rem'],
+          aspectRatio: '1',
           color: 'rgba(0,0,0,0)',
           userSelect: 'none',
           backgroundImage: `url(${UshioLogo.src})`,
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           backgroundSize: 'contain',
-        }}
+        })}
       >
         潮
       </div>
-      <div css={{ color: '#20C1F2' }}>
+      <div css={mq({ display: ['none', 'block'], color: '#20C1F2' })}>
         <p>Kazumi INADA ushio</p>
         <p>2023.2.18 - 4.8</p>
         <p>
