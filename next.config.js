@@ -6,6 +6,9 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   basePath,
+  images: {
+    unoptimized: true, // Image Optimization is not compatible with `next export`
+  },
 }
 
 module.exports = nextConfig
