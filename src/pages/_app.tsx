@@ -4,6 +4,20 @@ import facepaint from 'facepaint'
 import { DefaultSeo } from 'next-seo'
 import { GTagManager } from '@/components/GTagManager'
 import { useRouter } from 'next/router'
+import { Zen_Kaku_Gothic_New } from '@next/font/google'
+
+const fontZenKakuGothicNew = Zen_Kaku_Gothic_New({
+  weight: ['500'],
+  subsets: ['japanese'],
+  display: 'swap',
+  fallback: [
+    '-apple-system',
+    'Yu Gothic Medium',
+    'YuGothic',
+    'Meiryo',
+    'sans-serif',
+  ],
+})
 
 export const mq = facepaint([
   '@media(min-width: 720px)',
@@ -24,7 +38,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Global
         styles={mq({
           'html, body': {
-            fontFamily: 'sans-serif',
+            fontFamily: `'Helvetica Neue', 'Arial', ${fontZenKakuGothicNew.style.fontFamily}`,
             fontSize: ['14px', '1.2vw'],
           },
           p: {
