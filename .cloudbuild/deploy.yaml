@@ -1,6 +1,6 @@
 steps:
   # Fetch cache archive
-  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk:alpine
     entrypoint: '/bin/bash'
     args:
       [
@@ -13,13 +13,13 @@ steps:
     args: ['-c', 'tar xzf node_modules.tar.gz || exit 0']
 
   # Install deps
-  - name: node:18
+  - name: node:lts-alpine
     id: 'yarn-install'
     entrypoint: yarn
     args: ['install', '--frozen-lockfile']
 
   # Build app
-  - name: node:18
+  - name: node:lts-alpine
     entrypoint: yarn
     args: ['build']
     env:
@@ -28,7 +28,7 @@ steps:
       - 'NEXT_GTAG_TRACKING_ID=G-RL974H0D69'
 
   # Clear public storage if objects are exists
-  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk:alpine
     entrypoint: '/bin/bash'
     args:
       ['-c', 'gcloud storage rm -a gs://${_PUBLIC_BUCKET_NAME}/** || exit 0']
