@@ -34,7 +34,7 @@ steps:
       ['-c', 'gcloud storage rm -a gs://${_PUBLIC_BUCKET_NAME}/** || exit 0']
 
   # Upload to public storage
-  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk:alpine
     entrypoint: 'gcloud'
     args: ['storage', 'cp', '-r', './out/*', 'gs://${_PUBLIC_BUCKET_NAME}/']
 
@@ -45,7 +45,7 @@ steps:
     waitFor: ['yarn-install']
 
   # Cache node_modules archive
-  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk:alpine
     entrypoint: 'gcloud'
     waitFor: ['archive node_modules']
     args:
