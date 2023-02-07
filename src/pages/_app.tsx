@@ -4,9 +4,9 @@ import facepaint from 'facepaint'
 import { DefaultSeo } from 'next-seo'
 import { GTagManager } from '@/components/GTagManager'
 import { useRouter } from 'next/router'
-import { Zen_Kaku_Gothic_New } from '@next/font/google'
+import { Noto_Sans_JP } from '@next/font/google'
 
-const fontZenKakuGothicNew = Zen_Kaku_Gothic_New({
+const fontJapanese = Noto_Sans_JP({
   weight: ['500'],
   subsets: ['japanese'],
   display: 'swap',
@@ -38,7 +38,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Global
         styles={mq({
           'html, body': {
-            fontFamily: `'Helvetica Neue', 'Arial', ${fontZenKakuGothicNew.style.fontFamily}`,
+            fontFamily: `'Helvetica Neue', 'Arial', ${fontJapanese.style.fontFamily}`,
             fontSize: ['14px', '1.2vw'],
           },
           p: {
