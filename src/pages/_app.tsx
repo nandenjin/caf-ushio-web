@@ -21,7 +21,7 @@ const fontJapanese = Noto_Sans_JP({
 
 export const mq = facepaint([
   '@media(min-width: 720px)',
-  '@media(min-width: 1120px)',
+  '@media(min-width: 1300px)',
 ])
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -39,7 +39,7 @@ export default function App({ Component, pageProps }: AppProps) {
         styles={mq({
           'html, body': {
             fontFamily: `'Helvetica Neue', 'Arial', ${fontJapanese.style.fontFamily}`,
-            fontSize: ['14px', '1.2vw'],
+            fontSize: ['14px', '16px', '18px'],
           },
           p: {
             marginBottom: '0.5em',
