@@ -8,7 +8,7 @@ import { Noto_Sans_JP } from '@next/font/google'
 
 const fontJapanese = Noto_Sans_JP({
   weight: ['500'],
-  subsets: ['japanese'],
+  subsets: ['latin'],
   display: 'swap',
   fallback: [
     '-apple-system',
