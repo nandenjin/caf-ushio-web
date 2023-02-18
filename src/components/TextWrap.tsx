@@ -24,7 +24,7 @@ export const TextWrap: React.FC<Props> = ({ children }) => (
       },
       img: {
         display: 'block',
-        width: 'calc(47rem + 10rem)',
+        width: 'calc(47rem + 15rem)',
         height: 'auto',
         margin: '2rem auto',
         border: '1px solid rgba(0,0,0,.05)',
