@@ -11,7 +11,7 @@ export const PageIndexSectionHero = () => (
     css={{
       position: 'relative',
       width: '100%',
-      height: '100vh',
+      height: '100svh',
       backgroundColor: '#888',
     }}
   >
