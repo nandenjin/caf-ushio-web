@@ -4,20 +4,6 @@ import facepaint from 'facepaint'
 import { DefaultSeo } from 'next-seo'
 import { GTagManager } from '@/components/GTagManager'
 import { useRouter } from 'next/router'
-import { Noto_Sans_JP } from '@next/font/google'
-
-const fontJapanese = Noto_Sans_JP({
-  weight: ['500'],
-  subsets: ['latin'],
-  display: 'swap',
-  fallback: [
-    '-apple-system',
-    'Yu Gothic Medium',
-    'YuGothic',
-    'Meiryo',
-    'sans-serif',
-  ],
-})
 
 export const mq = facepaint([
   '@media(min-width: 720px)',
@@ -38,8 +24,8 @@ export default function App({ Component, pageProps }: AppProps) {
       <Global
         styles={mq({
           'html, body': {
-            fontFamily: `'Helvetica Neue', 'Arial', ${fontJapanese.style.fontFamily}`,
-            fontSize: ['14px', '16px', '18px'],
+            fontFamily: `'Helvetica Neue', 'Arial', '-apple-system', 'Hiragino Kaku Gothic ProN', 'Noto Sans CJK JP', 'Yu Gothic Medium', 'YuGothic', 'Meiryo', sans-serif`,
+            fontSize: '14px',
           },
           p: {
             marginBottom: '0.5em',
