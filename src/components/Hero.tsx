@@ -18,6 +18,9 @@ export const Hero = () => (
     <Image
       src={HeroBg}
       alt=""
+      sizes="100vw"
+      placeholder="blur"
+      fill
       css={{
         position: 'absolute',
         width: '100%',
@@ -58,6 +61,7 @@ export const Hero = () => (
       <Image
         src={KazumiInada}
         alt="稲田和巳"
+        sizes="100vw"
         css={mq({
           transform: ['none', 'translateY(25%)'],
           width: 'auto',
@@ -67,6 +71,7 @@ export const Hero = () => (
       <Image
         src={UshioLogo}
         alt="潮"
+        sizes="100vw"
         css={{ width: ['auto', '27vw'], height: ['100%', 'auto'] }}
       />
     </div>
