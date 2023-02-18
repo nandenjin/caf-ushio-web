@@ -2,7 +2,7 @@
 
 import { TextWrap } from './TextWrap'
 
-export const Access: React.FC = () => (
+export const PageIndexSectionAccess: React.FC = () => (
   <section
     css={{
       margin: '4rem auto auto',

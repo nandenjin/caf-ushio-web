@@ -6,7 +6,7 @@ import DisplayImg from '@/assets/display.jpg'
 import ContourImg from '@/assets/contour_2048w.jpg'
 import MeshImg from '@/assets/mesh_2048w.jpg'
 
-export const Intro: React.FC = () => (
+export const PageIndexSectionIntro: React.FC = () => (
   <section css={{ margin: '4rem auto' }}>
     <TextWrap>
       <p>この度、現代芸術振興財団は稲田和巳個展「潮」を開催いたします。</p>
