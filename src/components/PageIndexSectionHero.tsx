@@ -6,7 +6,7 @@ import UshioLogo from '@/assets/ushio.svg'
 import KazumiInada from '@/assets/kazumi-inada.svg'
 import { mq } from '@/pages/_app'
 
-export const Hero = () => (
+export const PageIndexSectionHero = () => (
   <header
     css={{
       position: 'relative',
@@ -87,7 +87,7 @@ export const Hero = () => (
         gridTemplateColumns: ['1fr', '1fr 1fr'],
         gap: '1rem',
         color: '#fff',
-        fontSize: ['14px', '20px'],
+        fontSize: ['14px', '17px'],
       })}
     >
       <div>
