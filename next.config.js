@@ -2,6 +2,7 @@
 
 const withExportImages = require('next-export-optimize-images')
 
+// Note: basePath is also read at export-images.config.js
 const HOST_URL = process.env.NEXT_PUBLIC_HOST_URL || 'http://localhost:3000'
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
