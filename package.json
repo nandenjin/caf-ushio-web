@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build && next export && next-export-optimize-images",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write \"**/*.{js,ts,tsx,jsx,json,md,yml,yaml}\"",
@@ -30,6 +30,7 @@
     "eslint-config-prettier": "^8.5.0",
     "husky": ">=7",
     "lint-staged": ">=10",
+    "next-export-optimize-images": "^2.0.0",
     "prettier": "^2.7.1"
   },
   "lint-staged": {
