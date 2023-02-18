@@ -2,10 +2,12 @@
 
 import React from 'react'
 import { EventJsonLd } from 'next-seo'
-import { Hero } from '@/components/Hero'
-import { Intro } from '@/components/Intro'
-import { Access } from '@/components/Access'
+import { PageIndexSectionHero } from '@/components/PageIndexSectionHero'
+import { PageIndexSectionIntro } from '@/components/PageIndexSectionHeroIntro'
+import { PageIndexSectionProfile } from '@/components/PageIndexSectionProfile'
+import { PageIndexSectionAccess } from '@/components/PageIndexSectionAccess'
 import { HeadIcon } from '@/components/HeadIcon'
+import { PageIndexSectionAward } from '@/components/PageIndexSectionAward'
 
 const Home: React.FC = () => (
   <>
@@ -39,10 +41,12 @@ const Home: React.FC = () => (
       eventAttendanceMode="OfflineEventAttendanceMode"
     />
     <HeadIcon />
-    <Hero />
+    <PageIndexSectionHero />
     <main>
-      <Intro />
-      <Access />
+      <PageIndexSectionIntro />
+      <PageIndexSectionProfile />
+      <PageIndexSectionAccess />
+      <PageIndexSectionAward />
     </main>
   </>
 )
