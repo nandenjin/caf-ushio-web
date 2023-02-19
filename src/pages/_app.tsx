@@ -67,7 +67,15 @@ export default function App({ Component, pageProps }: AppProps) {
         additionalLinkTags={[
           {
             rel: 'icon',
-            href: process.env.baseUrl + '/favicon.ico',
+            type: 'image/png',
+            sizes: '32x32',
+            href: process.env.baseUrl + '/laika_32.png',
+          },
+          {
+            rel: 'icon',
+            type: 'image/png',
+            sizes: '128x128',
+            href: process.env.baseUrl + '/laika_128.png',
           },
         ]}
       />
