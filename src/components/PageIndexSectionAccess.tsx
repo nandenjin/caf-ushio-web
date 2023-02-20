@@ -16,7 +16,9 @@ export const PageIndexSectionAccess: React.FC = () => (
     <TextWrap>
       <h2>来場案内</h2>
       <h3>現代芸術振興財団 ギャラリー</h3>
-      <p>2023.2.18 - 4.8 木・金 12:00-18:00／土 12:00-19:00／月・火・水 休廊</p>
+      <p>
+        2023.2.18 - 4.8 木・金 12:00-18:00／土 12:00-19:00／日-水・祝日 休廊
+      </p>
       <p>
         <a
           href="https://goo.gl/maps/PwwMK7MjE4aeqYyt7"
