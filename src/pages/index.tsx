@@ -8,6 +8,7 @@ import { PageIndexSectionProfile } from '@/components/PageIndexSectionProfile'
 import { PageIndexSectionAccess } from '@/components/PageIndexSectionAccess'
 import { HeadIcon } from '@/components/HeadIcon'
 import { PageIndexSectionAward } from '@/components/PageIndexSectionAward'
+import { SiteFooter } from '@/components/SiteFooter'
 
 const Home: React.FC = () => (
   <>
@@ -48,6 +49,7 @@ const Home: React.FC = () => (
       <PageIndexSectionAccess />
       <PageIndexSectionAward />
     </main>
+    <SiteFooter />
   </>
 )
 
