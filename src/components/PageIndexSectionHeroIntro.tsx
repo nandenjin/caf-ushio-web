@@ -2,9 +2,12 @@
 
 import { TextWrap } from './TextWrap'
 import Image from 'next/image'
-import DisplayImg from '@/assets/display.jpg'
-import ContourImg from '@/assets/contour_2048w.jpg'
-import MeshImg from '@/assets/mesh_2048w.jpg'
+import ImgWallCenter0 from '@/assets/wall-center_0.jpg'
+import ImgWallCenter1 from '@/assets/wall-center_1.jpg'
+import ImgWallLeft0 from '@/assets/wall-left_0.jpg'
+import ImgWallRight0 from '@/assets/wall-right_0.jpg'
+import ImgWallRight1 from '@/assets/wall-right_1.jpg'
+import ImgOutView0 from '@/assets/outview_0.jpg'
 
 export const PageIndexSectionIntro: React.FC = () => (
   <section css={{ margin: '4rem auto' }}>
@@ -23,9 +26,48 @@ export const PageIndexSectionIntro: React.FC = () => (
       </p>
     </TextWrap>
     <TextWrap>
-      <Image src={DisplayImg} alt="" width="500" height="300"></Image>
-      <Image src={ContourImg} alt="" width="500" height="300"></Image>
-      <Image src={MeshImg} alt="" width="500" height="300"></Image>
+      <Image
+        src={ImgWallCenter0}
+        alt=""
+        width="500"
+        height="300"
+        placeholder="blur"
+      ></Image>
+      <Image
+        src={ImgWallLeft0}
+        alt=""
+        width="500"
+        height="300"
+        placeholder="blur"
+      ></Image>
+      <Image
+        src={ImgWallRight0}
+        alt=""
+        width="500"
+        height="300"
+        placeholder="blur"
+      ></Image>
+      <Image
+        src={ImgWallCenter1}
+        alt=""
+        width="500"
+        height="300"
+        placeholder="blur"
+      ></Image>
+      <Image
+        src={ImgWallRight1}
+        alt=""
+        width="500"
+        height="300"
+        placeholder="blur"
+      ></Image>
+      <Image
+        src={ImgOutView0}
+        alt=""
+        width="500"
+        height="300"
+        placeholder="blur"
+      ></Image>
     </TextWrap>
   </section>
 )

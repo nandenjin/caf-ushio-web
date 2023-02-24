@@ -1,8 +1,13 @@
 /** @jsxImportSource @emotion/react */
 
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { join } from 'path'
 import { TextWrap } from './TextWrap'
+
+import ImgWork1 from '@/assets/work_1.jpg'
+import ImgWork2and3 from '@/assets/work_2-3.jpg'
+import ImgWork4 from '@/assets/work_4.jpg'
 
 const styleWorkNameEn = {
   display: 'block',
@@ -80,6 +85,29 @@ export const PageIndexSectionWorks: React.FC = () => {
         <p>
           制作にかかる数理的な処理はコンピュータアルゴリズムで実装されており、地形・稜線・粒子の流れは、作家の主観的意思を介することなく生成されています。鑑賞者の目に直接触れることこそありませんが、モデルを生み出しているこれらのシステムこそが、《潮》のまさに主体であると言えます。
         </p>
+      </TextWrap>
+      <TextWrap>
+        <Image
+          src={ImgWork1}
+          width="500"
+          height="300"
+          alt=""
+          placeholder="blur"
+        />
+        <Image
+          src={ImgWork2and3}
+          width="500"
+          height="300"
+          alt=""
+          placeholder="blur"
+        />
+        <Image
+          src={ImgWork4}
+          width="500"
+          height="300"
+          alt=""
+          placeholder="blur"
+        />
       </TextWrap>
     </section>
   )
