@@ -9,6 +9,8 @@ import { PageIndexSectionAccess } from '@/components/PageIndexSectionAccess'
 import { HeadIcon } from '@/components/HeadIcon'
 import { PageIndexSectionAward } from '@/components/PageIndexSectionAward'
 import { SiteFooter } from '@/components/SiteFooter'
+import { PageIndexSectionWorks } from '@/components/PageIndexSectionWorks'
+import { PageIndexSectionCredit } from '@/components/PageIndexSectionCredit'
 
 const Home: React.FC = () => (
   <>
@@ -47,6 +49,8 @@ const Home: React.FC = () => (
       <PageIndexSectionIntro />
       <PageIndexSectionProfile />
       <PageIndexSectionAccess />
+      <PageIndexSectionWorks />
+      <PageIndexSectionCredit />
       <PageIndexSectionAward />
     </main>
     <SiteFooter />
