@@ -12,7 +12,7 @@ export const TextWrap: React.FC<Props> = ({ children }) => (
       padding: '.1px 0',
       margin: '3em auto',
       color: 'rgba(0,0,0,.8)',
-      'h2, h3, h4, p, ul, ol, table, .text': {
+      'h2, h3, h4, p, &>ul, &>ol, &>table, .text': {
         maxWidth: '47rem',
         margin: ['0.8rem 20px', '0.8em auto'],
         lineHeight: '1.8',
@@ -36,7 +36,7 @@ export const TextWrap: React.FC<Props> = ({ children }) => (
           margin: '0.5rem 0',
         },
       },
-      table: {
+      '&>table': {
         display: 'block',
         borderCollapse: 'collapse',
         tr: {
