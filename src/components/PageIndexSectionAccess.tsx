@@ -8,8 +8,6 @@ export const PageIndexSectionAccess: React.FC = () => (
   <section
     css={{
       margin: '4rem auto auto',
-      padding: '.1px 0',
-      backgroundColor: 'rgba(0, 174, 239, .1)',
       '&>*:last-child': {
         marginBottom: '4rem',
       },

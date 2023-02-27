@@ -11,6 +11,7 @@ import { PageIndexSectionAward } from '@/components/PageIndexSectionAward'
 import { SiteFooter } from '@/components/SiteFooter'
 import { PageIndexSectionWorks } from '@/components/PageIndexSectionWorks'
 import { PageIndexSectionCredit } from '@/components/PageIndexSectionCredit'
+import { PageIndexSectionEvent } from '@/components/PageIndexSectionEvent'
 
 const Home: React.FC = () => (
   <>
@@ -48,7 +49,15 @@ const Home: React.FC = () => (
     <main>
       <PageIndexSectionIntro />
       <PageIndexSectionProfile />
-      <PageIndexSectionAccess />
+      <div
+        css={{
+          padding: '1px 0',
+          backgroundColor: 'rgba(0, 174, 239, .1)',
+        }}
+      >
+        <PageIndexSectionAccess />
+        <PageIndexSectionEvent />
+      </div>
       <PageIndexSectionWorks />
       <PageIndexSectionCredit />
       <PageIndexSectionAward />
