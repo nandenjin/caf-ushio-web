@@ -5,6 +5,7 @@ import HeroBg from '@/assets/ushio-roppongi_pilot_230206_2.jpg'
 import UshioLogo from '@/assets/ushio.svg'
 import KazumiInada from '@/assets/kazumi-inada.svg'
 import { mq } from '@/pages/_app'
+import { OpenDayBadge } from './OpenDayBadge'
 
 export const PageIndexSectionHero = () => (
   <header
@@ -93,10 +94,12 @@ export const PageIndexSectionHero = () => (
       <div>
         <div>現代芸術振興財団 ギャラリー（東京・六本木）</div>
         <div>2023.2.18 - 4.8 木・金 12:00-18:00 / 土 12:00-19:00</div>
+        <OpenDayBadge target="gallery" />
       </div>
       <div css={mq({ textAlign: ['left', 'right'] })}>
         <div>ラピロス六本木 ショーウィンドウ</div>
         <div>2023.2.18 - 4.8 無休</div>
+        <OpenDayBadge target="isong" />
       </div>
     </div>
   </header>

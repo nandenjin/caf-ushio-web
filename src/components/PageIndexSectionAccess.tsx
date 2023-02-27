@@ -1,5 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
+import { OpenDayBadge } from './OpenDayBadge'
+import { OpenDaysCalendar } from './OpenDaysCalendar'
 import { TextWrap } from './TextWrap'
 
 export const PageIndexSectionAccess: React.FC = () => (
@@ -15,9 +17,19 @@ export const PageIndexSectionAccess: React.FC = () => (
   >
     <TextWrap>
       <h2>来場案内</h2>
+      <p>会期：2023年2月18日（土） - 4月8日（土）</p>
+      <OpenDaysCalendar
+        className="text"
+        style={{ marginTop: '2.5rem', marginBottom: '2.5rem' }}
+      />
       <h3>現代芸術振興財団 ギャラリー</h3>
       <p>
-        2023.2.18 - 4.8 木・金 12:00-18:00／土 12:00-19:00／日-水・祝日 休廊
+        <OpenDayBadge target="gallery" />
+      </p>
+      <p>
+        2023年2月18日（土） - 4月8日（土）
+        <br />
+        木・金 12:00-18:00／土 12:00-19:00／日-水・祝日 休廊
       </p>
       <p>
         <a
@@ -42,7 +54,14 @@ export const PageIndexSectionAccess: React.FC = () => (
     </TextWrap>
     <TextWrap>
       <h3>ラピロス六本木 ショーウィンドウ</h3>
-      <p>2023.2.18 - 4.8 無休</p>
+      <p>
+        <OpenDayBadge target="isong" />
+      </p>
+      <p>
+        2023年2月18日（土） - 4月8日（土）
+        <br />
+        無休
+      </p>
       <p>
         <a
           href="https://goo.gl/maps/ahgpR3BR21YuXRGRA"
