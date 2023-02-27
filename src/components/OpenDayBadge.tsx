@@ -19,7 +19,7 @@ export const OpenDayBadge: React.FC<Props> = ({ date, target }) => {
         : 'closed'
       : 'open'
   return (
-    <div
+    <span
       data-status={ok}
       css={{
         display: 'inline-block',
@@ -49,6 +49,6 @@ export const OpenDayBadge: React.FC<Props> = ({ date, target }) => {
         : state !== OpenStatus.CLOSED
         ? '稼働中'
         : '会期終了'}
-    </div>
+    </span>
   )
 }
