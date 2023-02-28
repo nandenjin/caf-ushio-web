@@ -5,21 +5,21 @@ steps:
     args:
       [
         '-c',
-        'gcloud storage cp gs://${_CACHE_BUCKET_NAME}/caches/caf-web/node_modules.tar.gz . || exit 0',
+        'gcloud storage cp gs://${_CACHE_BUCKET_NAME}/caches/caf-web/cache.tar.gz . || exit 0',
       ]
 
   # Unzip cache
   - name: bash
-    args: ['-c', 'tar xzf node_modules.tar.gz || exit 0']
+    args: ['-c', 'tar xzf cache.tar.gz || exit 0']
 
   # Install deps
   - name: node:lts-alpine
-    id: 'yarn-install'
     entrypoint: yarn
     args: ['install', '--frozen-lockfile']
 
   # Build app
   - name: node:lts-alpine
+    id: 'build'
     entrypoint: yarn
     args: ['build']
     env:
@@ -27,16 +27,10 @@ steps:
       - 'NEXT_PUBLIC_BASE_PATH=/caf/inada'
       - 'NEXT_GTAG_TRACKING_ID=G-RL974H0D69'
 
-  # Clear public storage if objects are exists
+  # Sync public storage
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk:alpine
-    entrypoint: '/bin/bash'
-    args:
-      ['-c', 'gcloud storage rm -a gs://${_PUBLIC_BUCKET_NAME}/** || exit 0']
-
-  # Upload to public storage
-  - name: gcr.io/google.com/cloudsdktool/cloud-sdk:alpine
-    entrypoint: 'gcloud'
-    args: ['storage', 'cp', '-r', './out/*', 'gs://${_PUBLIC_BUCKET_NAME}/']
+    entrypoint: 'gsutil'
+    args: ['-m', 'rsync', '-r', './out', 'gs://${_PUBLIC_BUCKET_NAME}/']
 
   # Set max-age of HTML files (others lives 3600s by default of GCS)
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk:alpine
@@ -49,21 +43,21 @@ steps:
         'gs://${_PUBLIC_BUCKET_NAME}/**/*.html',
       ]
 
-  # Zip node_modules
+  # Zip node_modules and .next
   - name: bash
-    id: 'archive node_modules'
-    args: ['tar', 'czf', 'node_modules.tar.gz', 'node_modules']
-    waitFor: ['yarn-install']
+    id: 'archive cache'
+    waitFor: ['build']
+    args: ['tar', 'czf', 'cache.tar.gz', 'node_modules', '.next']
 
-  # Cache node_modules archive
+  # Cache archive
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk:alpine
     entrypoint: 'gcloud'
-    waitFor: ['archive node_modules']
+    waitFor: ['archive cache']
     args:
       [
         'storage',
         'cp',
-        'node_modules.tar.gz',
+        'cache.tar.gz',
         'gs://${_CACHE_BUCKET_NAME}/caches/caf-web/',
       ]
 
