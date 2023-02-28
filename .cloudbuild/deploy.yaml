@@ -45,7 +45,7 @@ steps:
       [
         'setmeta',
         '-h',
-        '"cache-control: public, max-age=60"',
+        'cache-control: public, max-age=60',
         'gs://${_PUBLIC_BUCKET_NAME}/**/*.html',
       ]
 
