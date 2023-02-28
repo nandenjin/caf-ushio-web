@@ -14,12 +14,12 @@ steps:
 
   # Install deps
   - name: node:lts-alpine
-    id: 'yarn-install'
     entrypoint: yarn
     args: ['install', '--frozen-lockfile']
 
   # Build app
   - name: node:lts-alpine
+    id: 'build'
     entrypoint: yarn
     args: ['build']
     env:
@@ -46,8 +46,8 @@ steps:
   # Zip node_modules and .next
   - name: bash
     id: 'archive cache'
+    waitFor: ['build']
     args: ['tar', 'czf', 'cache.tar.gz', 'node_modules', '.next']
-    waitFor: ['yarn-install']
 
   # Cache archive
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk:alpine
