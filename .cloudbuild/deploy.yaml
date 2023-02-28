@@ -5,12 +5,12 @@ steps:
     args:
       [
         '-c',
-        'gcloud storage cp gs://${_CACHE_BUCKET_NAME}/caches/caf-web/node_modules.tar.gz . || exit 0',
+        'gcloud storage cp gs://${_CACHE_BUCKET_NAME}/caches/caf-web/cache.tar.gz . || exit 0',
       ]
 
   # Unzip cache
   - name: bash
-    args: ['-c', 'tar xzf node_modules.tar.gz || exit 0']
+    args: ['-c', 'tar xzf cache.tar.gz || exit 0']
 
   # Install deps
   - name: node:lts-alpine
@@ -49,21 +49,21 @@ steps:
         'gs://${_PUBLIC_BUCKET_NAME}/**/*.html',
       ]
 
-  # Zip node_modules
+  # Zip node_modules and .next
   - name: bash
-    id: 'archive node_modules'
-    args: ['tar', 'czf', 'node_modules.tar.gz', 'node_modules']
+    id: 'archive cache'
+    args: ['tar', 'czf', 'cache.tar.gz', 'node_modules', '.next']
     waitFor: ['yarn-install']
 
-  # Cache node_modules archive
+  # Cache archive
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk:alpine
     entrypoint: 'gcloud'
-    waitFor: ['archive node_modules']
+    waitFor: ['archive cache']
     args:
       [
         'storage',
         'cp',
-        'node_modules.tar.gz',
+        'cache.tar.gz',
         'gs://${_CACHE_BUCKET_NAME}/caches/caf-web/',
       ]
 
