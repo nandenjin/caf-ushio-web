@@ -38,17 +38,6 @@ steps:
     entrypoint: 'gcloud'
     args: ['storage', 'cp', '-r', './out/*', 'gs://${_PUBLIC_BUCKET_NAME}/']
 
-  # Set max-age of HTML files (others lives 3600s by default of GCS)
-  - name: gcr.io/google.com/cloudsdktool/cloud-sdk:alpine
-    entrypoint: 'gsutil'
-    args:
-      [
-        'setmeta',
-        '-h',
-        '"cache-control: public, max-age=60"',
-        'gs://${_PUBLIC_BUCKET_NAME}/**/*.html',
-      ]
-
   # Zip node_modules
   - name: bash
     id: 'archive node_modules'
