@@ -40,10 +40,9 @@ steps:
 
   # Set max-age of HTML files (others lives 3600s by default of GCS)
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk:alpine
-    entrypoint: 'gcloud'
+    entrypoint: 'gsutil'
     args:
       [
-        'storage',
         'setmeta',
         '-h',
         '"Cache-Control: public, max-age=60"',
