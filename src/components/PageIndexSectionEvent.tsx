@@ -21,7 +21,7 @@ export const PageIndexSectionEvent: React.FC = () => (
       <h2>会期中のイベント</h2>
       <div css={STYLE_CARD} className="text ">
         <h3>公開メンテナンス</h3>
-        <p css={{ fontWeight: 'bold' }}>次回: 3月4日（土）17:00〜17:15ごろ</p>
+        <p css={{ fontWeight: 'bold' }}>次回: 3月11日（土）13:00〜13:15ごろ</p>
         <p>ギャラリーオープン中に、作家が作品のメンテナンス作業を行います。</p>
         <ul css={{ fontSize: '0.9em' }}>
           <li>
