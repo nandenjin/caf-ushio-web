@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { Laika } from './Laika'
 
@@ -33,6 +34,29 @@ export const SiteFooter: React.FC = () => {
       </div>
       <p css={{ color: '#888', fontSize: '0.8rem' }}>
         &copy; 稲田和巳／（公財）現代芸術振興財団
+      </p>
+      <p
+        css={{
+          filter: 'grayscale(100%) sepia(20%) hue-rotate(140deg) opacity(80%)',
+        }}
+      >
+        <a
+          href="https://github.com/nandenjin/caf-ushio-web"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Image
+            src="https://img.shields.io/github/last-commit/nandenjin/caf-ushio-web?style=flat-square"
+            width="100"
+            height="20"
+            alt="Contribute on GitHub"
+            css={{
+              width: 'auto',
+
+              margin: '1rem auto',
+            }}
+          />
+        </a>
       </p>
     </footer>
   )
