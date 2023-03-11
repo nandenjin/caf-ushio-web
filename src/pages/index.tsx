@@ -53,7 +53,7 @@ const Home: React.FC = () => (
       <div
         css={{
           padding: '1px 0',
-          backgroundColor: 'rgba(0, 0, 0, .05)',
+          backgroundColor: 'var(--color-bg-lightgray)',
         }}
       >
         <PageIndexSectionArticles />

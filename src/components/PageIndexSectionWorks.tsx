@@ -28,7 +28,7 @@ export const PageIndexSectionWorks: React.FC = () => {
           style={{
             padding: '1rem 2rem',
             marginBottom: '2em',
-            background: '#eee',
+            background: 'var(--color-bg-lightgray)',
           }}
         >
           <p>会場で配布しているハンドアウトもご覧いただけます。</p>

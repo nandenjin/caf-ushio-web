@@ -23,6 +23,9 @@ export default function App({ Component, pageProps }: AppProps) {
       />
       <Global
         styles={mq({
+          ':root': {
+            '--color-bg-lightgray': 'rgba(0, 25, 70, 0.05)',
+          },
           'html, body': {
             fontFamily: `'Helvetica Neue', 'Arial', '-apple-system', 'Hiragino Kaku Gothic ProN', 'Noto Sans CJK JP', 'Yu Gothic Medium', 'YuGothic', 'Meiryo', sans-serif`,
             fontSize: '14px',

@@ -44,7 +44,7 @@ const Article: React.FC<ArticleProp> = ({
         border: '1px solid rgba(0,0,0,.1)',
         display: 'grid',
         gridTemplateColumns: ['auto', '250px auto'],
-        img: {
+        '.thumbnail': {
           height: '100%',
           marginTop: 0,
           marginBottom: 0,
@@ -53,7 +53,13 @@ const Article: React.FC<ArticleProp> = ({
         },
       })}
     >
-      <Image src={thumbnail} alt="" />
+      <Image
+        className="thumbnail"
+        src={thumbnail}
+        alt=""
+        width="250"
+        height="250"
+      />
       <div css={mq({ padding: ['0.7rem', '1rem 2rem'] })}>
         <h3 css={{ fontSize: '1em' }}>{title}</h3>
         <p
