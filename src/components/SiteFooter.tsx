@@ -45,17 +45,18 @@ export const SiteFooter: React.FC = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <Image
-            src="https://img.shields.io/github/last-commit/nandenjin/caf-ushio-web?style=flat-square"
-            width="100"
-            height="20"
-            alt="Contribute on GitHub"
-            css={{
-              width: 'auto',
-
-              margin: '1rem auto',
-            }}
-          />
+          {
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src="https://img.shields.io/github/last-commit/nandenjin/caf-ushio-web?style=flat-square"
+              height="20"
+              alt="Contribute on GitHub"
+              css={{
+                width: 'auto',
+                margin: '1rem auto',
+              }}
+            />
+          }
         </a>
       </p>
     </footer>
