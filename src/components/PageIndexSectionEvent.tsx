@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
 import { mq } from '@/pages/_app'
+import { ScheduleDate } from './ScheduleDate'
 import { TextWrap } from './TextWrap'
 
 const STYLE_CARD = mq({
@@ -21,7 +22,18 @@ export const PageIndexSectionEvent: React.FC = () => (
       <h2>会期中のイベント</h2>
       <div css={STYLE_CARD} className="text ">
         <h3>公開メンテナンス</h3>
-        <p css={{ fontWeight: 'bold' }}>次回: 3月11日（土）13:00〜13:15ごろ</p>
+        <ul css={{ fontWeight: 'bold' }}>
+          <li>
+            <ScheduleDate date="2023-03-11">
+              3月11日（土）13:00〜13:15ごろ
+            </ScheduleDate>
+          </li>
+          <li>
+            <ScheduleDate date="2023-03-04">
+              3月4日（土）17:00〜16:15ごろ
+            </ScheduleDate>
+          </li>
+        </ul>
         <p>ギャラリーオープン中に、作家が作品のメンテナンス作業を行います。</p>
         <ul css={{ fontSize: '0.9em' }}>
           <li>
