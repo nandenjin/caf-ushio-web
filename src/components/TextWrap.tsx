@@ -18,7 +18,7 @@ export const TextWrap: React.FC<Props> = ({ children }) => (
         lineHeight: '1.8',
       },
       h2: {
-        marginTop: '5rem',
+        marginTop: '3rem',
         marginBottom: '2rem',
         fontSize: '1.5rem',
       },
