@@ -1,8 +1,21 @@
 /** @jsxImportSource @emotion/react */
+import { Interpolation, Theme } from '@emotion/react'
 import dynamic from 'next/dynamic'
 import { OpenDayBadge } from './OpenDayBadge'
 import { OpenDaysCalendar } from './OpenDaysCalendar'
 import { TextWrap } from './TextWrap'
+
+const pointLabelIconStyle: Interpolation<Theme> = {
+  display: 'inline-block',
+  width: '1.7rem',
+  height: '1.7rem',
+  lineHeight: '1.7rem',
+  textAlign: 'center',
+  borderRadius: '50%',
+  backgroundColor: '#09f',
+  color: '#fff',
+  marginRight: '0.5rem',
+}
 
 export const PageIndexSectionAccess: React.FC = () => (
   <section
@@ -22,7 +35,16 @@ export const PageIndexSectionAccess: React.FC = () => (
       />
     </TextWrap>
     <TextWrap>
-      <h3>現代芸術振興財団 ギャラリー</h3>
+      <h3
+        css={{
+          '::before': {
+            content: '"A"',
+            ...pointLabelIconStyle,
+          },
+        }}
+      >
+        現代芸術振興財団 ギャラリー
+      </h3>
       <p>
         <OpenDayBadge target="gallery" />
       </p>
@@ -44,7 +66,16 @@ export const PageIndexSectionAccess: React.FC = () => (
       </p>
     </TextWrap>
     <TextWrap>
-      <h3>ラピロス六本木 ショーウィンドウ</h3>
+      <h3
+        css={{
+          '::before': {
+            content: '"B"',
+            ...pointLabelIconStyle,
+          },
+        }}
+      >
+        ラピロス六本木 ショーウィンドウ
+      </h3>
       <p>
         <OpenDayBadge target="isong" />
       </p>
