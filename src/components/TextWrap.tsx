@@ -22,7 +22,7 @@ export const TextWrap: React.FC<Props> = ({ children }) => (
         marginBottom: '2rem',
         fontSize: '1.5rem',
       },
-      img: {
+      '&>img': {
         display: 'block',
         width: 'calc(47rem + 15rem)',
         height: 'auto',

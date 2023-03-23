@@ -45,6 +45,7 @@ const Article: React.FC<ArticleProp> = ({
         display: 'grid',
         gridTemplateColumns: ['auto', '250px auto'],
         '.thumbnail': {
+          width: '100%',
           height: '100%',
           marginTop: 0,
           marginBottom: 0,

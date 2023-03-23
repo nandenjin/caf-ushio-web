@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-
+import dynamic from 'next/dynamic'
 import { OpenDayBadge } from './OpenDayBadge'
 import { OpenDaysCalendar } from './OpenDaysCalendar'
 import { TextWrap } from './TextWrap'
@@ -20,6 +20,8 @@ export const PageIndexSectionAccess: React.FC = () => (
         className="text"
         style={{ marginTop: '2.5rem', marginBottom: '2.5rem' }}
       />
+    </TextWrap>
+    <TextWrap>
       <h3>現代芸術振興財団 ギャラリー</h3>
       <p>
         <OpenDayBadge target="gallery" />
@@ -40,15 +42,6 @@ export const PageIndexSectionAccess: React.FC = () => (
           六本木駅3番出口から徒歩3分
         </a>
       </p>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.614989080514!2d139.72930335147876!3d35.66185633854345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b3c7471e68d%3A0x460d395da823dcfa!2z5YWs55uK6LKh5Zuj5rOV5Lq6IOePvuS7o-iKuOihk-aMr-iIiOiyoeWbow!5e0!3m2!1sja!2sjp!4v1676652965608!5m2!1sja!2sjp&"
-        allowFullScreen={true}
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-        css={{
-          aspectRatio: '16/9',
-        }}
-      ></iframe>
     </TextWrap>
     <TextWrap>
       <h3>ラピロス六本木 ショーウィンドウ</h3>
@@ -70,5 +63,18 @@ export const PageIndexSectionAccess: React.FC = () => (
         </a>
       </p>
     </TextWrap>
+    <TextWrap>
+      <AccessMap />
+    </TextWrap>
   </section>
+)
+
+const AccessMap = dynamic(
+  import('./AccessMap').then((m) => m.AccessMap),
+  {
+    ssr: false,
+    loading: () => (
+      <div style={{ textAlign: 'center', paddingTop: 20 }}>Chargement…</div>
+    ),
+  }
 )
