@@ -92,6 +92,7 @@ export const PageIndexSectionWorks: React.FC = () => {
           width="500"
           height="300"
           alt=""
+          sizes="(max-width: 720px) 100vw, 866px"
           placeholder="blur"
         />
         <Image
@@ -99,6 +100,7 @@ export const PageIndexSectionWorks: React.FC = () => {
           width="500"
           height="300"
           alt=""
+          sizes="(max-width: 720px) 100vw, 866px"
           placeholder="blur"
         />
         <Image
@@ -106,6 +108,7 @@ export const PageIndexSectionWorks: React.FC = () => {
           width="500"
           height="300"
           alt=""
+          sizes="(max-width: 720px) 100vw, 866px"
           placeholder="blur"
         />
       </TextWrap>

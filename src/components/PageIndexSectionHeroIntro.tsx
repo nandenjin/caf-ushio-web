@@ -31,6 +31,7 @@ export const PageIndexSectionIntro: React.FC = () => (
         alt=""
         width="500"
         height="300"
+        sizes="(max-width: 720px) 100vw, 866px"
         placeholder="blur"
       ></Image>
       <Image
@@ -38,6 +39,7 @@ export const PageIndexSectionIntro: React.FC = () => (
         alt=""
         width="500"
         height="300"
+        sizes="(max-width: 720px) 100vw, 866px"
         placeholder="blur"
       ></Image>
       <Image
@@ -45,6 +47,7 @@ export const PageIndexSectionIntro: React.FC = () => (
         alt=""
         width="500"
         height="300"
+        sizes="(max-width: 720px) 100vw, 866px"
         placeholder="blur"
       ></Image>
       <Image
@@ -52,6 +55,7 @@ export const PageIndexSectionIntro: React.FC = () => (
         alt=""
         width="500"
         height="300"
+        sizes="(max-width: 720px) 100vw, 866px"
         placeholder="blur"
       ></Image>
       <Image
@@ -59,6 +63,7 @@ export const PageIndexSectionIntro: React.FC = () => (
         alt=""
         width="500"
         height="300"
+        sizes="(max-width: 720px) 100vw, 866px"
         placeholder="blur"
       ></Image>
       <Image
@@ -66,6 +71,7 @@ export const PageIndexSectionIntro: React.FC = () => (
         alt=""
         width="500"
         height="300"
+        sizes="(max-width: 720px) 100vw, 866px"
         placeholder="blur"
       ></Image>
     </TextWrap>

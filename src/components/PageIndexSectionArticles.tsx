@@ -59,6 +59,8 @@ const Article: React.FC<ArticleProp> = ({
         alt=""
         width="250"
         height="250"
+        sizes="(max-width: 720px) 100vw, 250px"
+        placeholder="blur"
       />
       <div css={mq({ padding: ['0.7rem', '1rem 2rem'] })}>
         <h3 css={{ fontSize: '1em' }}>{title}</h3>
