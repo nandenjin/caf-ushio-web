@@ -5,6 +5,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
  */
 const config = {
   basePath,
+  convertFormat: [['jpg', 'webp']],
 }
 
 module.exports = config
