@@ -37,8 +37,11 @@ export const HeadIcon: React.FC = () => {
           height: '70px',
           background: highlight ? 'rgba(0, 174, 239, 1)' : '#fff',
           mask: `url("${CAFLogo.src}") no-repeat center center / contain`,
+          textIndent: '-9999px',
         }}
-      ></a>
+      >
+        現代芸術振興財団
+      </a>
     </div>
   )
 }
