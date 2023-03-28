@@ -30,7 +30,7 @@ export const OpenDayBadge: React.FC<Props> = ({ date, target }) => {
         verticalAlign: 'middle',
         letterSpacing: '0.1em',
         '&[data-status="open"]': {
-          background: '#09f',
+          background: '#06a',
         },
         '&[data-status="closed"]': {
           background: 'rgb(200, 0, 0)',

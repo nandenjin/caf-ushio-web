@@ -67,7 +67,7 @@ const Article: React.FC<ArticleProp> = ({
         <h3 css={{ fontSize: '1em' }}>{title}</h3>
         <p
           css={{
-            color: 'rgba(0,0,0,.5)',
+            color: 'rgba(0,0,0,.6)',
             fontSize: '0.9em',
             lineHeight: '1.2',
           }}
