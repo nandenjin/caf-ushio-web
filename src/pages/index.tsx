@@ -13,6 +13,7 @@ import { PageIndexSectionWorks } from '@/components/PageIndexSectionWorks'
 import { PageIndexSectionCredit } from '@/components/PageIndexSectionCredit'
 import { PageIndexSectionEvent } from '@/components/PageIndexSectionEvent'
 import { PageIndexSectionArticles } from '@/components/PageIndexSectionArticles'
+import { PageIndexSectionTalk } from '@/components/PageIndexSectionTalk'
 
 const Home: React.FC = () => (
   <>
@@ -56,6 +57,7 @@ const Home: React.FC = () => (
           backgroundColor: 'var(--color-bg-lightgray)',
         }}
       >
+        <PageIndexSectionTalk />
         <PageIndexSectionArticles />
       </div>
       <div
