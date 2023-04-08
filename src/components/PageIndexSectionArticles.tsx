@@ -4,7 +4,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { TextWrap } from './TextWrap'
 
-import ImgWallCenter0 from '@/assets/wall-center_0.jpg'
+import ImgWallLeft0 from '@/assets/wall-left_0.jpg'
+import ImgPilot from '@/assets/ushio-roppongi_pilot_230206_2.jpg'
 import { ComponentProps } from 'react'
 import { mq } from '@/pages/_app'
 
@@ -13,10 +14,16 @@ export const PageIndexSectionArticles: React.FC = () => (
     <TextWrap>
       <h2>参考記事</h2>
       <Article
+        title="Artists #38 稲田和巳"
+        description="2月18日から4月8日まで、当財団事務局ギャラリーにて稲田和巳さん個展「潮」が開催されています。インタビューでは本展の作品や現在のご活動についてお話を伺いました。"
+        url="https://gendai-art.org/interviews/artists_kazumiinada/"
+        thumbnail={ImgPilot}
+      />
+      <Article
         title="六本木『潮』展 読み解きのヒント"
         description="東京・六本木で開催中の個展で展示中のシリーズ《潮》は、統計データを使って仮想の地形を作り、社会の姿を捉えようとする試みです。この作品の仕組みと読み解き方について解説します。"
         url="https://note.com/nandenjin/n/nf4a0b0caad68"
-        thumbnail={ImgWallCenter0}
+        thumbnail={ImgWallLeft0}
       />
     </TextWrap>
   </section>
