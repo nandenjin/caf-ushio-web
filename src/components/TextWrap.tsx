@@ -49,7 +49,7 @@ export const TextWrap: React.FC<Props> = ({ children }) => (
           borderBottom: '1px solid rgba(0,0,0,.5)',
         },
       },
-      iframe: {
+      '&>iframe': {
         display: 'block',
         width: ['100%', '47rem'],
         margin: '2rem auto',
