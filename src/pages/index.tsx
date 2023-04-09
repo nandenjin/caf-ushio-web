@@ -63,7 +63,7 @@ const Home: React.FC = () => (
       <div
         css={{
           padding: '1px 0',
-          backgroundColor: 'rgba(0, 174, 239, .1)',
+          backgroundColor: 'var(--color-bg-lightblue)',
         }}
       >
         <PageIndexSectionAccess />
