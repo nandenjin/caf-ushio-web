@@ -54,6 +54,9 @@ export const PageIndexSectionWorks: React.FC = () => {
               (23.2.18)
             </li>
           </ul>
+          <p css={{ fontSize: '0.8rem' }}>
+            こちらのデータは、個人で楽しむ用途に限りご利用いただけます。
+          </p>
         </div>
         <ol>
           <li>
