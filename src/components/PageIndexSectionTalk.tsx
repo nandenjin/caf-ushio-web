@@ -4,6 +4,7 @@ import LiteYouTubeEmbed from 'react-lite-youtube-embed'
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 import { TextWrap } from './TextWrap'
 import { useRouter } from 'next/router'
+import ImgTalkThumbnail from '@/assets/talk_thumbnail.jpg'
 
 export const PageIndexSectionTalk: React.FC = () => {
   const router = useRouter()
@@ -31,10 +32,9 @@ export const PageIndexSectionTalk: React.FC = () => {
           <LiteYouTubeEmbed
             id="PLiMtoy_ozB-Rw6VPkFuQwuKi6R2c1jAfp"
             playlist={true}
-            playlistCoverId="uRuBLNhpxh0"
-            poster="hqdefault"
             title="稲田和巳個展『潮』トーク - 稲田和巳 × トモトシ × 花形慎"
             noCookie={true}
+            thumbnail={ImgTalkThumbnail.src}
           />
         </div>
 
