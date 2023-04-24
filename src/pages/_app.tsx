@@ -41,6 +41,14 @@ export default function App({ Component, pageProps }: AppProps) {
             color: '#09f',
             textDecoration: 'none',
           },
+          '.button-link': {
+            display: 'inline-block',
+            padding: '0.5em 1.5em',
+            backgroundColor: '#09f',
+            color: '#fff',
+            textDecoration: 'none',
+            borderRadius: '0.25em',
+          },
         })}
       />
       {process.env.GTAG_TRACKING_ID ? (
