@@ -43,6 +43,18 @@ steps:
         'gs://${_PUBLIC_BUCKET_NAME}/**/*.html',
       ]
 
+  # Set mimetype for webp files
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk:alpine
+    entrypoint: 'gsutil'
+    args:
+      [
+        '-m',
+        'setmeta',
+        '-h',
+        'Content-Type:image/webp',
+        'gs://${_PUBLIC_BUCKET_NAME}/**/*.webp',
+      ]
+
   # Zip node_modules and .next
   - name: bash
     id: 'archive cache'
