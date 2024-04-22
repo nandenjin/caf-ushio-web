@@ -352,9 +352,9 @@
   integrity sha512-fi9kvwtC3IQ6Y3QVDkYEZsqEcetAdWD0zqqk8pEHlDXWkgS2WzolWN8Z5PGPT7YJ7ga71CCI0fVKVnVKqV+P6Q==
 
 "@types/geojson@*":
-  version "7946.0.13"
-  resolved "https://registry.yarnpkg.com/@types/geojson/-/geojson-7946.0.13.tgz#e6e77ea9ecf36564980a861e24e62a095988775e"
-  integrity sha512-bmrNrgKMOhM3WsafmbGmC+6dsF2Z308vLFsQ3a/bT8X8Sv5clVYpPars/UPq+sAaJP+5OoLAYgwbkS5QEJdLUQ==
+  version "7946.0.14"
+  resolved "https://registry.yarnpkg.com/@types/geojson/-/geojson-7946.0.14.tgz#319b63ad6df705ee2a65a73ef042c8271e696613"
+  integrity sha512-WCfD5Ht3ZesJUsONdhvm84dmzWOiOzOAqOncN0++w0lBw1o8OuDNJF2McvvCef/yBqb/HYRahp1BYtODFQ8bRg==
 
 "@types/http-cache-semantics@*":
   version "4.0.4"
@@ -374,9 +374,9 @@
     "@types/node" "*"
 
 "@types/leaflet@^1.9.3":
-  version "1.9.6"
-  resolved "https://registry.yarnpkg.com/@types/leaflet/-/leaflet-1.9.6.tgz#d58ecdbe9f1f383cb0a7133a020cd05bfe00a762"
-  integrity sha512-HakGTK5LBBWegNWsAmTlG55zN1zszYec7aG47/z6SzT90bW2vqjmbqk3YKAbrtveO+G7fSTKTYqVbIwAFnTrbg==
+  version "1.9.11"
+  resolved "https://registry.yarnpkg.com/@types/leaflet/-/leaflet-1.9.11.tgz#91c489f098db821204a401a9f49b9a6aed0e0b17"
+  integrity sha512-Cwqw9h+1LVnsuOutOSNHlIE1DBQ9U/0CCLfAkwtkgggrYRwf7SUlyZM0LQzngpwKyvFQbPLCf6hNMzly56pGZw==
   dependencies:
     "@types/geojson" "*"
 
